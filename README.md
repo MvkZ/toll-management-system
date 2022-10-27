@@ -1,5 +1,7 @@
 # Toll Management System
 
+Backend service for unified toll management system with docker deployment. Plug n play.
+
 ### Requirements
 
 - jdk 1.8
@@ -8,6 +10,7 @@
 - postgres installed
 - Postman
 - docker
+- docker-compose
 
 ### DB Schema
 
