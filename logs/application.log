@@ -1,0 +1,40 @@
+2022-10-27 21:20:38 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.cors.CORSFilter
+
+2022-10-27 21:20:39 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2022-10-27 21:20:41 [1;31mERROR[0;39m [36mcontrollers.TicketController[0;39m [35m[0;39m scala.MatchError:  (of class java.lang.String)
+	at core.TicketHelpers$.checkIfValid(TicketHelpers.scala:22)
+	at controllers.TicketController.$anonfun$purchaseTicket$3(TicketController.scala:60)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:63)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:100)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:100)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:49)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+
+2022-10-27 21:21:37 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.cors.CORSFilter
+
+2022-10-27 21:21:38 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2022-10-27 21:48:21 [34mINFO [0;39m [36mp.a.i.l.c.CoordinatedShutdownSupport[0;39m [35m[0;39m Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
+2022-10-27 21:48:21 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Stopping Akka HTTP server...
+2022-10-27 21:48:21 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Terminating server binding for /0:0:0:0:0:0:0:0:9000
+2022-10-27 21:48:21 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Running provided shutdown stop hooks
