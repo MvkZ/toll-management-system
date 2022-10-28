@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# APIs to get the DB contents
+
+GET     /tolls  controllers.TollController.getTolls
+GET     /booths  controllers.TollController.getBooths
+GET     /passes  controllers.TollController.getPasses
+
+## APIs to add tolls & booths
+
+POST    /toll/add   controllers.TollController.addToll
+POST    /booth/add   controllers.TollController.addBooth
+POST    /pass/add   controllers.TollController.addPass
+
+### APIs to handle the toll tickets
+
+POST    /vehicle/verify     controllers.TicketController.purchaseTicket

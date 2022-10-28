@@ -1,0 +1,29 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.3
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+    hostname: db
+    networks:
+      - local
+  app:
+    image: toll-management-system:1.0-SNAPSHOT
+    links:
+      - db
+    ports:
+      - "9000:9000"
+    command: "-Dslick.dbs.default.db.url='jdbc:postgresql://db:5432/postgres'"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      - local
+networks:
+  local:
+    driver: bridge
