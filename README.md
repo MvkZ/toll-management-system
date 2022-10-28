@@ -256,3 +256,4 @@ app_1  | 1
 - Adding DELETE Apis for removing data from the Tables
 - Interactive subscription of toll ticket instead of POST Request
 - Adding additional Test cases
+- Time based working instead of only Dates, which works as of now.

@@ -84,6 +84,16 @@ class TableRepository(db: Database, profile: JdbcProfile) extends Logging {
     }
   }
 
+  def updateTicket(newTicket: TollTicket) = {
+    try {
+      val insertQuery = table.ticketTable.filter(_.ticketId === newTicket.ticketId).update(TollTicket(0, newTicket.ticketDate, newTicket.expiryDate, newTicket.boothId, newTicket.vehicleId, newTicket.passId))
+      Await.result(db.run(insertQuery), Duration.Inf)
+    }
+    catch {
+      case exception: Exception => logger.error(ExceptionUtils.getStackTrace(exception))
+    }
+  }
+
   def getParticularToll(boothId: Int) = {
     Try(Await.result(db.run(table.boothTable.filter(_.boothId === boothId).result), Duration.Inf).toList).getOrElse(List())
   }
